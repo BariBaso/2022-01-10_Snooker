@@ -19,6 +19,8 @@ namespace snoker
             }
             Console.WriteLine($"A világ ranglistán {versenyzok.Count} enyi versenyző szerepel. ");
 
+            Console.WriteLine($"A versenyzők átlagosan{versenyzok.Average(x => x.Nyeremeny):0.00} keresterk");
+
         }
     }
 }
