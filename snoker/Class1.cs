@@ -10,18 +10,19 @@ namespace snoker
     {
         public int Helyezes { get; set; }
         public string Név { get; set; }
-        public string Osztaly { get; set; }             //prop!!!!!!!!!!!!!!!!
+        public string Ország { get; set; }             //prop!!!!!!!!!!!!!!!!
         public int Nyeremeny { get; set; }
 
 
         public Versenyzo(string sor)
         {
             string[] t = sor.Split(';');
-            Helyezes = int.Parse(t[0]);
+            Helyezes = int.Parse(t[0]);                 //beolvasás
             Név = t[1];
-            Osztaly = t[2];
+            Ország = t[2];
             Nyeremeny = int.Parse(t[3]);
 
         }
+        
     }
 }
