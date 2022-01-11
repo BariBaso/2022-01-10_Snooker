@@ -40,7 +40,31 @@ namespace snoker
 
             //6.
             Console.WriteLine($"a versenyzők közőtt {(versenyzok.Any(v => v.Ország == "Norvégia") ? "van" : "nincs") } notvég"); //van e norvéggg
+            //7.
+            versenyzok.GroupBy(x => x.Ország).Count();
 
+            Dictionary<string, int> statisztika = new Dictionary<string, int>();
+
+            foreach (var v in versenyzok)
+            {
+                if (statisztika.ContainsKey(v.Ország))
+                {
+                    statisztika[v.Ország]++;
+
+                }
+                else
+                {
+                    statisztika.Add(v.Ország, 1);
+                } 
+            }
+            Console.WriteLine("statisztika");
+            foreach (var s in statisztika)
+            {
+                if (s.Value > 4)
+                {
+                    Console.WriteLine($"\t{s.Key} - {s.Value} fő");
+                }
+            }
         }
     }
 }
