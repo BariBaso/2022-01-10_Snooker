@@ -65,6 +65,7 @@ namespace snoker
                     Console.WriteLine($"\t{s.Key} - {s.Value} fő");
                 }
             }
+            /////// //  /   /   //  /   /       /   /bőőőőőőőf
         }
     }
 }
